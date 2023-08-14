@@ -40,9 +40,9 @@ class User < ApplicationRecord
 
   has_many :liked_photos, through: :likes, source: :photo
 
-  has_many :sent_follow_requests, foreign_key: :sender_id, class_name: "FollowRequest"
+  has_many :sent_follow_requests, foreign_key: :sender_id, class_name: "FollowRequest", dependent: :destroy
 
-  has_many :accepted_sent_follow_requests, -> { accepted }, foreign_key: :send_id
+  has_many :accepted_sent_follow_requests, -> { accepted }, foreign_key: :sender_id
 
   has_many :leaders, through: :accepted_sent_follow_requests, source: :recepient
 
