@@ -9,6 +9,7 @@ task sample_data: :environment do
 
    12.times do 
      name= Faker::Name.first_name.downcase
+     p name
      u = User.create(
       email: "#{name}@example.com",
       username: name,
@@ -17,7 +18,6 @@ task sample_data: :environment do
      )
    end
   
-    
     p " #{User.count} users have been created"
     users= User.all
 
