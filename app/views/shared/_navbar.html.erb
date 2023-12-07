@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
     <%= link_to "Photogram", root_path, class: "navbar-brand" %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,19 +7,19 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mr-auto">
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Resources
           </a>
-          <ul class="dropdown-menu">
+
+          <div class="dropdown-menu" aria-labelledby="NavbarDropdown">
             <li><a class="dropdown-item" href="/photos">Photos</a></li>
             <li><a class="dropdown-item" href="/comments">Comments</a></li>
-
-          <li><a class="dropdown-item" href="/follow_requests">Follow Requests</a></li>
-          <li><a class="dropdown-item" href="/likes">likes</a></li>
-
-          </ul>
+            <li><a class="dropdown-item" href="/follow_requests">Follow Requests</a></li>
+            <li><a class="dropdown-item" href="/likes">likes</a></li>
+          </div>
         </li>        
       </ul>
 
