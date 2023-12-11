@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   #get "user/:id" =>  "users/show", as: :user
   resources :users, only: :show
 
+  get "/:username" => "users#show"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
