@@ -25,12 +25,12 @@
   </div>
 </div>
 
-<h2> Own Photos <h2>
+<h2> Liked Photos <h2>
 
 
- <%= current_user.own_photos.count %>
+ <%= current_user.liked_photos.count %>
 
-  <% current_user.own_photos.each do |z| %>
-    <%= render "photos/photo", giraffe: z %>
-    
+  <% current_user.liked_photos.each do |photo| %>
+        <%= render "photos/photo", giraffe: photo %>
+
 <% end %>
