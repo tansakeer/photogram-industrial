@@ -5,18 +5,23 @@
       </h1>
 
     <ul class="nav nav-pills nav-justified">
+    
         <li class="nav-item">
       <%= link_to 'Posts', user_path(@user.username), class: "nav-link" %>
         </li>
+
         <li class="nav-item">
       <%= link_to 'Liked', liked_photos_path(@user.username), class: "nav-link" %>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Feed</a>
+      <%= link_to 'Feed', user_feed_path(@user.username), class: "nav-link" %>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">Followers</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">Following</a>
         </li>
@@ -24,8 +29,6 @@
 
   </div>
 </div>
-
-<h2> Own Photos <h2>
 
 
  <%= current_user.own_photos.count %>
