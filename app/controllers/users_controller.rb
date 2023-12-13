@@ -3,7 +3,9 @@ class UsersController < ApplicationController
     @user = User.find_by!(username: params.fetch(:username))
   end
 
-  def feed
-    @user = User.find_by!(username: params.fetch(:username))
+  def following
+    #scope :accepted, -> { where(status: "accepted" )}
+    #@user = User.FollowRequest.find_by!(username: params.fetch(:username))
+    
   end
 end
