@@ -26,7 +26,7 @@ class Photo < ApplicationRecord
 
   has_many :likes
 
-  has_many :fans, through: :likes
+  has_many :fans, through: :likes, source: :fan
   
   validates :caption, presence: true
 
