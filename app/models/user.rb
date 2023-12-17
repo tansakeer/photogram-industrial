@@ -45,7 +45,7 @@ class User < ApplicationRecord
 
   has_many :accepted_sent_follow_requests, -> { accepted }, foreign_key: :sender_id, class_name: "FollowRequest"
 
-  has_many :leaders, through: :accepted_sent_follow_requests, source: :recepient
+  has_many :leaders, through: :accepted_sent_follow_requests, source: :recipient
 
   has_many :followers, through: :accepted_received_follow_requests, source: :sender
 
