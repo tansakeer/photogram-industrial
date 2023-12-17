@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show   
     @user = User.find_by!(username: params.fetch(:username))
   end
@@ -8,8 +9,10 @@ class UsersController < ApplicationController
   end
   
   def following
-    #scope :accepted, -> { where(status: "accepted" )}
-    #@user = User.FollowRequest.find_by!(username: params.fetch(:username))
+    @user = User.find_by!(username: params.fetch(:username))
   end
 
+  def followers
+    @user = User.find_by!(username: params.fetch(:username))
+  end
 end

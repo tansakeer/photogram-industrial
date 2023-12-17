@@ -32,9 +32,9 @@
 
 <%#find those that follow the current user %>
 
- <%= current_user.leaders.count %>
+ <%= current_user.followers.count %>
 
-  <% current_user.leaders.each do |u| %>
+  <% current_user.followers.each do |u| %>
         <%= render "users/user", giraffe: u %>
 
 <% end %>
